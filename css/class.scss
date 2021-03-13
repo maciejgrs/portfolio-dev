@@ -1,0 +1,98 @@
+$font: "Armata", sans-serif;
+$green: #72b626;
+$black: #111;
+$nero: #252525;
+$transition: all 0.4s ease;
+$navbar-color: #292C31;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+  color: #fff;
+  line-height: 1.5;
+  background:$black;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0.6rem 0;
+}
+// .btn {
+//   border: none;
+//   margin: 1rem 0;
+//    padding: 20px 50px;
+//   background: $green;
+//   font-size: 0.9rem;
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   letter-spacing: 2px;
+//   display: inline-block;
+//   cursor: pointer;
+//   transition: $transition;
+//   border-radius: 10px;
+//   &:hover {
+//     opacity: 0.5;
+//   }
+// }
+.text {
+  font-size: 1rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+.container {
+  width: 100vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 500px){
+    .title > h2{
+        font-size: 3rem;
+    }
+    .title div h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        width: 88vw;
+    }
+}
+@media screen and (min-width: 1200px){
+    .container{
+        width: 85vw;
+    }
+}
+
+/* animation and transition stopper styling */
+.resize-animation-stopper *{
+    animation: none !important;
+    transition: none !important;
+}
