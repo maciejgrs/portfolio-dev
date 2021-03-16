@@ -1,0 +1,71 @@
+.clock .card {
+  height: 90%;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.clock .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clock .title {
+  text-align: center;
+}
+
+.clock .time {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.clock .btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+#alarm-modal {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  -webkit-box-shadow: 0 2px 100px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 100px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  opacity: 0;
+  right: -100%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#alarm-modal.show {
+  opacity: 1;
+  right: 50px;
+}
+
+#alarm-modal img {
+  width: 128px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=clock.css.map */

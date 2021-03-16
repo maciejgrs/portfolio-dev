@@ -1,8 +1,12 @@
 // konktakt 
+$(document).ready(function(){
+  $('#formcontact').trigger(':reset');
+});
+
 $(document).ready(function () {
  $('.send').click(function (event) {
  
-console.log("clicked button")
+
 
   const email = $('.email').val()
   const subject = $('.subject').val()
@@ -42,10 +46,28 @@ console.log("clicked button")
     event.preventDefault()
     status.append('<div>Nie wpisałeś treści wiadomości!</div>')
   }
-
+  if(email.length > 4 && email.includes('@') && email.includes ('.') && message.length > 3 && name.length > 1 && subject.length > 1) {
+   console.log("wszystko")
+   setTimeout(() => {
+    $('#formcontact')[0].reset();
+  }, 3000);
+  
+ 
+  } 
  })
 })
 // kontakt end
+
+const nameInput = document.querySelector(".name") 
+  nameInput.value = ''
+  const subjectInput = document.querySelector(".subject") 
+  subjectInput.value = ''
+  const messageInput = document.querySelector(".message") 
+  messageInput.value = ''
+  const emailInput = document.querySelector(".email") 
+  emailInput.value = ''
+
+
 
 const cvBtn = document.querySelector("#dupa1");
 
@@ -60,7 +82,7 @@ cvBtn.addEventListener("click", () => {
   setTimeout(() => {
     cvBtn.classList.add("success");
     cvBtn.innerHTML = '<i class = "fas fa-check"></i>';
-    window.location.href = "http://mgrs.me/assets/PDF.pdf";
+    window.location.href = "http://mgrs.me/assets/CV_Maciej_Grys.pdf";
   }, 3000);
 
   setTimeout(() => {
@@ -88,53 +110,26 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("resize-animation-stopper");
   }, 400);
 });
-const dasz = document.querySelector(".dasz");
-dasz.addEventListener('click', () => {
 
-console.log("daszs");
-
-if (window.location.protocol == "https:") {
-  
-  window.location = document.URL.replace("https://", "http://");
-  window.open("http://mgrs.me/daszbord/dashboard.html", '_blank')
+function myFunction() {
+  if (window.location.protocol == "https:") {
    
-} else 
+    var newLine = "\r\n";
+    var msg =
+      "Darmowe API wykorzystywane przy projekcie działa niestety korzystając tylko z protokołu HTTP.";
+    msg += newLine;
+    msg +=
+      "Zostanie otwarta nowa zakładka z adresem strony HTTP i przeglądarka może Cię o tym ostrzec.";
+    msg += newLine;
+    msg += "Strona jest jednak całkowicie bezpieczna";
+    msg += newLine;
+    msg += "Dokładny adres:  http://mgrs.me/daszbord/dashboard.html";
+
+    if (confirm(msg)) {
+      window.open("http://mgrs.me/daszbord/dashboard.html", "_blank", "noopener noreferrer");
+    }
+  } else {
+    window.open("http://mgrs.me/daszbord/dashboard.html", "_blank", "noopener noreferrer");
+  }
+}
  
-})
- 
- 
-// const btn = document.querySelector("#dupa");
-
-// btn.addEventListener("click", () => {
-//   btn.classList.add("active");
-//   console.log("CHUJ");
-//   btn.innerText = "";
-//   active = true;
-
-//   setTimeout(() => {
-//     btn.classList.add("success");
-//     btn.innerHTML = '<i class = "fas fa-check"></i>';
-//   }, 3000);
-
-//   setTimeout(() => {
-//     btn.classList.remove("active");
-//     btn.classList.remove("success");
-//     btn.innerText = "WYŚLIJ";
-//   }, 6000);
-// });
-
-// btn.innerText =''
-// active = true;
-
-// setTimeout (() => {
-//   btn.classList.add('success')
-//   btn.innerHTML = <i class ="fas-fa-check"></i>
-// },2000)
-
-// setTimeout (() => {
-//   btn.classList.remove('active')
-//   btn.classList.remove('success')
-//   btn.innerText = 'WYŚLIJ'
-//   btn.innerHTML = <i class ="fas-fa-check"></i>
-// },3000)
-// })

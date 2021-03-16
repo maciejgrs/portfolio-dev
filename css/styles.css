@@ -53,6 +53,13 @@ p {
   width: 100vw;
   margin: 0 auto;
 }
+.img-container img {
+    border-radius: 5px;
+}
+.img-container:hover {
+    opacity: 0.5;
+    transition: 1s ease;
+}
 
 @media screen and (min-width: 500px) {
   .title > h2 {
@@ -175,7 +182,7 @@ p {
 }
 
 .showNav {
-  height: 200px;
+  height: 370px;
 }
 
 .home {
@@ -303,28 +310,34 @@ p {
   position: absolute;
 }
 
-.skills .item-text .w-90 {
+.skills .item-text .html {
   margin-left: 85%;
 }
 
-.skills .item-text .w-75 {
+.skills .item-text .css {
   margin-left: 70%;
 }
 
-.skills .item-text .w-85 {
+.skills .item-text .js {
   margin-left: 80%;
 }
 
-.skills .item-text .w-80 {
-  margin-left: 75%;
+.skills .item-text .linux {
+  margin-left: 35%;
 }
 
-.skills .item-text .w-60 {
-  margin-left: 55%;
+.skills .item-text .node {
+  margin-left: 80%;
 }
 
-.skills .item-text .w-68 {
-  margin-left: 63%;
+.skills .item-text .wordpress {
+  margin-left: 60%;
+}
+.skills .item-text .english {
+  margin-left: 80%;
+}
+.skills .item-text .checi {
+  margin-left: 80%;
 }
 
 .progress {
@@ -338,33 +351,40 @@ p {
 
 .progress-bar {
   background: #72b626;
+  
   height: 100%;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
-.progress-bar.w-90 {
-  width: 90%;
+.progress-bar.html {
+  width: 70%;
 }
 
-.progress-bar.w-75 {
-  width: 75%;
+.progress-bar.css {
+  width: 30%;
 }
 
-.progress-bar.w-85 {
-  width: 85%;
-}
-
-.progress-bar.w-80 {
-  width: 80%;
-}
-
-.progress-bar.w-60 {
+.progress-bar.js {
   width: 60%;
 }
+.progress-bar.linux {
+  width: 10%;
+}
 
-.progress-bar.w-68 {
-  width: 68%;
+.progress-bar.node {
+  width: 20%;
+}
+
+.progress-bar.wordpress {
+  width: 50%;
+}
+
+.progress-bar.english {
+  width: 70%;
+}
+.progress-bar.checi {
+  width: 100%;
 }
 
 .contact {
@@ -461,7 +481,7 @@ p {
   width: 100%;
   margin: 1rem 0;
   background: #252525;
-  color: #72b626;
+ color: #72b626;
   border: 2px solid transparent;
   font-size: 1rem;
   padding: 0.8rem 1rem;
@@ -469,10 +489,8 @@ p {
   outline: 0;
   caret-color: #fff;
 }
-.dasz {
-  color: blue;
-}
-.dasz:hover {
+
+#dasz:hover {
   cursor: pointer;
 }
 
@@ -713,15 +731,22 @@ p {
   padding: 5rem 0 2.5rem 0;
 }
 
+.cvUl {
+    margin-left: 75px;
+}
 .resume .title,
 .resume p {
   text-align: center;
 }
+ 
 
 .resume > .text {
   width: 70%;
   margin: 1.5rem auto;
   text-align: center;
+}
+.resume .text ul {
+    margin-left: 50px;
 }
 
 .resume .item {
@@ -893,6 +918,23 @@ p {
 
 @media screen and (max-width: 535px) {
   /* home page */
+     .home .img-border {
+display:none;
+  }
+   .home .img-container {
+ margin-top: 180px;
+  }
+.skills .item-text .wordpress {
+display: none;
+}
+.skills .item-text .english {
+display: none;
+}
+.skills .item-text .checi {
+display: none;
+}
+
+ 
   .main {
     padding-top: 10px;
   }
@@ -931,6 +973,8 @@ p {
 
 @media screen and (min-width: 768px) {
   /* footer */
+ 
+
   .col-left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1149,4 +1193,21 @@ p {
         grid-template-columns: repeat(3, 1fr);
   }
 }
-/*# sourceMappingURL=styles.css.map */
+.rrobot-button {
+  font: "Armata", sans-serif;
+  
+  font-size: 15px;
+
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  color: #72b626;
+  background: transparent;
+ 
+
+  padding: 0;
+border: none;
+background: none;
+  
+}
+
